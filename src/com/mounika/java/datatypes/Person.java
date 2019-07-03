@@ -8,7 +8,7 @@ public class Person {
 	private float height;
 	
 	public String getFirstname() {
-		return firstname;
+		return firstname.toUpperCase();
 	}
 	public void setFirstname(String firstname) {
 		this.firstname = firstname;
