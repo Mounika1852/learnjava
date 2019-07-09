@@ -20,11 +20,12 @@ public class TestDatatypes {
 		mounika.setLastname("Maddipatla");
 		mounika.setAge(24);
 		mounika.setHeight(5.3f);
+		System.out.println(mounika);
 		
-		System.out.println(mounika.getFirstname());
+		/*System.out.println(mounika.getFirstname());
 		System.out.println(mounika.getLastname());
 		System.out.println(mounika.getAge());
-		System.out.println(mounika.getHeight());
+		System.out.println(mounika.getHeight());*/
 	}
 
 }
