@@ -2,26 +2,43 @@ package com.mounika.java.exceptions;
 
 public class ExceptionHandling {
 
+	public void throwCustomCheckedException() throws CustomCheckedException {
+		
+		throw new CustomCheckedException("Custom error message");
+		
+	}
+	
+	public void throwCustomUncheckedException() throws CustomUncheckedException{
+	// throw new CustomUncheckedException("Unchecked Exception Message");
+	}
+	
 	public static void main(String[] args) {
-		try{
+		
+		ExceptionHandling exceptionHandling = new ExceptionHandling();
+		
+	
+		
+		try {
+			exceptionHandling.throwCustomCheckedException();
+		} catch (CustomCheckedException  | CustomUncheckedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 			
-		}catch(Exception e) {
 			
-		}finally {
-			
+		} finally {
+			System.out.println("Inside finally ");
 		}
 		
-		try{
-			
-		}finally {
-			
+		try {
+		exceptionHandling.throwCustomUncheckedException();
+		System.out.println("Checking");
+		} catch (CustomUncheckedException e) {
+			System.out.println(e.getMessage());
 		}
 		
-		try{
-	
-		}catch(Exception e) {
-	
-		}
-
+			
+		
+		
+		
 	}
 }
